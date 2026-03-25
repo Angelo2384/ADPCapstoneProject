@@ -21,7 +21,7 @@ public class Vehicle {
     public Vehicle() {
     }
     //Private constructor for Builder pattern.
-    public Vehicle(Builder builder){
+    private Vehicle(Builder builder){
         this.vehicleID = builder.vehicleID;
         this.model = builder.model;
         this.regNumber = builder.regNumber;
