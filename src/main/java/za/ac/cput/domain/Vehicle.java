@@ -1,3 +1,9 @@
+/* Vehicle.java
+   Vehicle model class
+   Author: Redah Gamieldien (222641681)
+   Date: 25 March 2025
+ */
+
 package za.ac.cput.domain;
 
 /**
