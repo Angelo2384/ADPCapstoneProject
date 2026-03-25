@@ -1,0 +1,122 @@
+package za.ac.cput.domain;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+
+/**
+ * Represents a bookable time slot for a driving lesson.
+ */
+public class TimeSlot {
+    private int slotId;
+    private LocalTime startTime;
+    private LocalTime endTime;
+    private LocalDate date;
+    private boolean isBooked;
+
+
+    //Default constructor.
+    public TimeSlot(){
+    }
+
+
+    //Private constructor for Builder pattern.
+    public TimeSlot(Builder builder){
+        this.slotId = builder.slotId;
+        this.startTime = builder.startTime;
+        this.endTime = builder.endTime;
+        this.date = builder.date;
+        this.isBooked = builder.isBooked;
+    }
+
+    /** Returns the unique slot ID. */
+    public int getSlotId() {return slotId;}
+
+    /** Returns the start time of the slot. */
+    public LocalTime getStartTime() {return startTime;}
+
+    /** Returns the end time of the slot. */
+    public LocalTime getEndTime() {return endTime;}
+
+    /** Returns the date of the slot. */
+    public LocalDate getDate() {return date;}
+
+    /** Returns true if the slot is currently booked. */
+    public boolean isBooked() {return isBooked;}
+
+    /** Marks this slot as booked. */
+    public void reserved() {
+        isBooked = true;
+    }
+
+    /** Releases this slot, making it available again. */
+    public void release() {
+        isBooked = false;
+    }
+
+    /** Returns true if the slot is not booked. */
+    public boolean isAvailable() {
+        return !isBooked;
+    }
+
+    /**
+     * Builder for constructing TimeSlot instances step by step.
+     */
+    public static class Builder{
+        private int slotId;
+        private LocalTime startTime;
+        private LocalTime endTime;
+        private LocalDate date;
+        private boolean isBooked;
+
+        public Builder setSlotID(int slotId){
+            this.slotId = slotId;
+            return this;
+        }
+
+        public Builder setStartTime(LocalTime startTime){
+            this.startTime = startTime;
+            return this;
+        }
+
+        public Builder setEndTime(LocalTime endTime){
+            this.endTime = endTime;
+            return this;
+        }
+
+        public Builder setDate(LocalDate date){
+            this.date = date;
+            return this;
+        }
+
+        public Builder setIsBooked(boolean isBooked){
+            this.isBooked = isBooked;
+            return this;
+        }
+
+        public Builder copy(TimeSlot timeSlot){
+            this.slotId = timeSlot.getSlotId();
+            this.startTime = timeSlot.getStartTime();
+            this.endTime = timeSlot.getEndTime();
+            this.date = timeSlot.getDate();
+            this.isBooked = timeSlot.isBooked();
+            return this;
+        }
+
+        // builds the TimeSlot object from the Builder
+        public TimeSlot build() {
+            return new TimeSlot(this);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "TimeSlot{" +
+                "slotId=" + slotId +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", date=" + date +
+                ", isBooked=" + isBooked +
+                '}';
+    }
+}
