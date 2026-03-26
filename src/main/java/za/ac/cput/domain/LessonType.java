@@ -1,3 +1,8 @@
+/* LessonType.java
+LessonType model class
+Author: Rameez Karriem (222357320)
+Date: 25 March 2026
+*/
 package za.ac.cput.domain;
 
 /**
@@ -14,10 +19,9 @@ public class LessonType {
     private String description;     // Detailed description of the lesson type
 
     /**
-     * Private default constructor.
-     * Prevents direct instantiation without using the Builder pattern.
+     * Public default constructor.
      */
-    private LessonType() {
+    public LessonType() {
     }
 
     /**
@@ -75,21 +79,6 @@ public class LessonType {
      */
     public String getDescription() {
         return description;
-    }
-
-    /**
-     * Returns a string representation of the LessonType object.
-     * @return A formatted string containing all lesson type details
-     */
-    @Override
-    public String toString() {
-        return "LessonType{" +
-                "lessonId=" + lessonId +
-                ", typeName='" + typeName + '\'' +
-                ", price=" + price +
-                ", duration=" + duration +
-                ", description='" + description + '\'' +
-                '}';
     }
 
     /**
