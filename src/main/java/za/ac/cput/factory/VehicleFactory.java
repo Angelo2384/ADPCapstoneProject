@@ -3,7 +3,6 @@
    Author: Redah Gamieldien (222641681)
    Date: 26 March 2026
  */
-
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Vehicle;
@@ -31,6 +30,7 @@ public class VehicleFactory {
                 Helper.isNullOrEmpty(transmissionType)) {
             return null;
         }
+
 
         return new Vehicle.Builder()
                 .setVehicleID(vehicleID)

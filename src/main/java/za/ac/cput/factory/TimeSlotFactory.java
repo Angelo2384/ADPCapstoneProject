@@ -6,10 +6,8 @@
 
 package za.ac.cput.factory;
 
-
 import za.ac.cput.domain.TimeSlot;
 import za.ac.cput.util.Helper;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 
