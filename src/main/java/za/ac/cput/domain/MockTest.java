@@ -32,7 +32,7 @@ public class MockTest {
     public int getScore() { return score; }
     public boolean isPassed() { return passed; }
 
-//builder
+//Builder pattern
     public static class Builder {
         private int testId;
         private LocalDate dateTaken;
