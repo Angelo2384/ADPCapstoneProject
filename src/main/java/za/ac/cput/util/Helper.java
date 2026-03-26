@@ -10,4 +10,9 @@ public class Helper {
     public static boolean isNullOrEmpty(String value) {
         return value == null || value.isEmpty();
     }
+
+    //Checks any object, will use for other than string
+    public static boolean isNull(Object obj) {
+        return obj == null;
+    }
 }
