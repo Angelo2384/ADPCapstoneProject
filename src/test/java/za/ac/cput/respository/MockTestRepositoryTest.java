@@ -100,7 +100,7 @@ public class MockTestRepositoryTest {
     @Order(5)
     void getAll() {
 
-        // Add an admin to repository
+        // Add an mocktest to repository
         mockTestRepository.create(createMockTest());
 
         // Check repository is not empty
