@@ -1,3 +1,9 @@
+/*
+ * MockTestFactoryTest.java
+ * MockTestFactoryTest class
+ * Author: Angelo Adams(230450431)
+ * Date: 26 March 2026
+*/
 package za.ac.cput.factory;
 
 import org.junit.jupiter.api.MethodOrderer;
@@ -28,9 +34,9 @@ public class MockTestFactoryTest {
                 50,                     // score
                 true              // userId
         );
-        assertNotNull(mockTest);  // Verify admin was created
+        assertNotNull(mockTest);  // Verify mocktest was created
     }
-    // Test 2: Create a learner with empty
+    // Test 2: Create a score with negative value
     @Test
     @Order(2)  // Runs second
     public void testMockTestWithNegativeScore()
@@ -50,13 +56,13 @@ public class MockTestFactoryTest {
         public void testCreateMockTestWithEmptyTestId() {
 
             MockTest mockTest = MockTestFactory.createMockTest(
-                    "A001",             // vehicleID
-                    LocalDate.of(2026, 6,25 ),   // model
-                    50,       // regNumber
-                                  // transmissionType (empty)
-                    true                // isAvailable
+                    "A001",             // testID
+                    LocalDate.of(2026, 6,25 ),   // localdate
+                    50,       // score
+                                  
+                    true                // 
             );
-            assertNull(mockTest);  // Verify vehicle was NOT created
+            assertNull(mockTest);  // Verify mocktest was NOT created
         }
 
 
