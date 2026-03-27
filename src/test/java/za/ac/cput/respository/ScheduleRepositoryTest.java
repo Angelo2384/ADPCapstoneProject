@@ -103,5 +103,5 @@ public class ScheduleRepositoryTest {
 
         // Check repository is not empty
         assertFalse(scheduleRepository.getAll().isEmpty());
-    }
+     }
 }
