@@ -87,7 +87,7 @@ public class ScheduleRepositoryTest {
         Schedule schedule = createSchedule();
         scheduleRepository.create(schedule);
 
-        // Delete Schedule by ID
+        // Delete Schedule by  ID
         boolean deleted = scheduleRepository.delete(schedule.getScheduleId());
 
         // Verify deletion was successful
